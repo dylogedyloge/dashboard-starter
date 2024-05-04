@@ -16,7 +16,7 @@ export function UserNav() {
   const { data: session } = useSession();
   if (session) {
     return (
-      <DropdownMenu>
+      <DropdownMenu dir="rtl">
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="relative h-8 w-8 rounded-full">
             <Avatar className="h-8 w-8">

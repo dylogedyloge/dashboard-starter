@@ -48,9 +48,9 @@ export function ColumnActions({
           setIsEditDisable(!editDisable);
           updateCol(id, name);
           toast({
-            title: "Name Updated",
+            title: "عنوان عوض شد",
             variant: "default",
-            description: `${title} updated to ${name}`,
+            description: `${title} تغییر کرد به ${name}`,
           });
         }}
       >
@@ -62,7 +62,7 @@ export function ColumnActions({
           ref={inputRef}
         />
       </form>
-      <DropdownMenu>
+      <DropdownMenu dir="rtl">
         <DropdownMenuTrigger asChild>
           <Button variant="secondary" className="ml-1">
             <span className="sr-only">Actions</span>
@@ -78,7 +78,7 @@ export function ColumnActions({
               }, 500);
             }}
           >
-            Rename
+            تغییر عنوان
           </DropdownMenuItem>
           <DropdownMenuSeparator />
 
@@ -86,22 +86,20 @@ export function ColumnActions({
             onSelect={() => setShowDeleteDialog(true)}
             className="text-red-600"
           >
-            Delete Section
+            حذف ستون
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>
-              Are you sure want to delete column?
-            </AlertDialogTitle>
+            <AlertDialogTitle>آیا از حذف این ستون مطمئنید؟</AlertDialogTitle>
             <AlertDialogDescription>
-              NOTE: All tasks related to this category will also be deleted.
+              توجه: تمام تسک‌های مربوط به این ستون هم حذف خواهد شد.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogCancel>انصراف</AlertDialogCancel>
             <Button
               variant="destructive"
               onClick={() => {
@@ -111,11 +109,11 @@ export function ColumnActions({
                 setShowDeleteDialog(false);
                 removeCol(id);
                 toast({
-                  description: "This column has been deleted.",
+                  description: "این ستون حذف شد.",
                 });
               }}
             >
-              Delete
+              حذف
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>

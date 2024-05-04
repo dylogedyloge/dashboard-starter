@@ -46,10 +46,10 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [imgLoading, setImgLoading] = useState(false);
-  const title = initialData ? "Edit product" : "Create Your Profile";
+  const title = initialData ? "اصلاح اطلاعات" : "پروفایل خود را ایجاد کنید";
   const description = initialData
-    ? "Edit a product."
-    : "To create your resume, we first need some basic information about you.";
+    ? "اصلاح اطلاعات"
+    : "برای ایجاد پروفایل نیاز به اطلاعاتی در مورد شما داریم";
   const toastMessage = initialData ? "Product updated." : "Product created.";
   const action = initialData ? "Save changes" : "Create";
   const [previousStep, setPreviousStep] = useState(0);
@@ -127,8 +127,8 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
 
   const steps = [
     {
-      id: "Step 1",
-      name: "Personal Information",
+      id: "مرحلهٔ اول",
+      name: "اطلاعات شخصی",
       fields: [
         "firstname",
         "lastname",
@@ -139,8 +139,8 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
       ],
     },
     {
-      id: "Step 2",
-      name: "Professional Informations",
+      id: "مرحلهٔ دوم",
+      name: "اطلاعات شغلی",
       // fields are mapping and flattening for the error to be trigger  for the dynamic fields
       fields: fields
         ?.map((_, index) => [
@@ -154,7 +154,7 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
         ])
         .flat(),
     },
-    { id: "Step 3", name: "Complete" },
+    { id: "مرحلهٔ سوم", name: "تکمیل اطلاعات" },
   ];
 
   const next = async () => {
@@ -182,8 +182,8 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
     }
   };
 
-  const countries = [{ id: "wow", name: "india" }];
-  const cities = [{ id: "2", name: "kerala" }];
+  const countries = [{ id: "wow", name: "ّایران" }];
+  const cities = [{ id: "2", name: "مشهد" }];
 
   return (
     <>
@@ -254,11 +254,11 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                   name="firstname"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>First Name</FormLabel>
+                      <FormLabel>نام</FormLabel>
                       <FormControl>
                         <Input
                           disabled={loading}
-                          placeholder="John"
+                          placeholder="امیر"
                           {...field}
                         />
                       </FormControl>
@@ -271,11 +271,11 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                   name="lastname"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Last Name</FormLabel>
+                      <FormLabel>نام خانوادگی</FormLabel>
                       <FormControl>
                         <Input
                           disabled={loading}
-                          placeholder="Doe"
+                          placeholder="نجفی"
                           {...field}
                         />
                       </FormControl>
@@ -288,11 +288,11 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>ایمیل</FormLabel>
                       <FormControl>
                         <Input
                           disabled={loading}
-                          placeholder="johndoe@gmail.com"
+                          placeholder="amirnajafi@gmail.com"
                           {...field}
                         />
                       </FormControl>
@@ -305,11 +305,11 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                   name="contactno"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Contact Number</FormLabel>
+                      <FormLabel>شماره تلفن</FormLabel>
                       <FormControl>
                         <Input
                           type="number"
-                          placeholder="Enter you contact number"
+                          placeholder="شماره تماستان را وارد کنید"
                           disabled={loading}
                           {...field}
                         />
@@ -323,7 +323,7 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                   name="country"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Country</FormLabel>
+                      <FormLabel>کشور</FormLabel>
                       <Select
                         disabled={loading}
                         onValueChange={field.onChange}
@@ -334,7 +334,7 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                           <SelectTrigger>
                             <SelectValue
                               defaultValue={field.value}
-                              placeholder="Select a country"
+                              placeholder="کشور رانتخاب کنید"
                             />
                           </SelectTrigger>
                         </FormControl>
@@ -356,7 +356,7 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                   name="city"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>City</FormLabel>
+                      <FormLabel>شهر</FormLabel>
                       <Select
                         disabled={loading}
                         onValueChange={field.onChange}
@@ -367,7 +367,7 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                           <SelectTrigger>
                             <SelectValue
                               defaultValue={field.value}
-                              placeholder="Select a city"
+                              placeholder="شهر را انتخاب کنید"
                             />
                           </SelectTrigger>
                         </FormControl>
@@ -581,14 +581,14 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                       })
                     }
                   >
-                    Add More
+                    اضافه کنید
                   </Button>
                 </div>
               </>
             )}
             {currentStep === 2 && (
               <div>
-                <h1>Completed</h1>
+                <h1>تکمیل شده</h1>
                 <pre className="whitespace-pre-wrap">
                   {JSON.stringify(data)}
                 </pre>

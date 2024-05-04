@@ -33,15 +33,13 @@ export default function NewTaskDialog() {
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="secondary" size="sm">
-          ＋ Add New Todo
+          ＋ تسک جدید اضافه کنید
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Add New Todo</DialogTitle>
-          <DialogDescription>
-            What do you want to get done today?
-          </DialogDescription>
+          <DialogTitle>تسک جدید اضافه کنید</DialogTitle>
+          <DialogDescription>مایلید چه تسکی اضافه کنید؟</DialogDescription>
         </DialogHeader>
         <form
           id="todo-form"
@@ -52,7 +50,7 @@ export default function NewTaskDialog() {
             <Input
               id="title"
               name="title"
-              placeholder="Todo title..."
+              placeholder="عنوان تسک..."
               className="col-span-4"
             />
           </div>
@@ -60,7 +58,7 @@ export default function NewTaskDialog() {
             <Textarea
               id="description"
               name="description"
-              placeholder="Description..."
+              placeholder="توضیح..."
               className="col-span-4"
             />
           </div>
@@ -68,7 +66,7 @@ export default function NewTaskDialog() {
         <DialogFooter>
           <DialogTrigger asChild>
             <Button type="submit" size="sm" form="todo-form">
-              Add Todo
+              تسک اضافه کنید
             </Button>
           </DialogTrigger>
         </DialogFooter>

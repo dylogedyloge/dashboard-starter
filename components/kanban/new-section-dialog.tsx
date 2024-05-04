@@ -31,15 +31,13 @@ export default function NewSectionDialog() {
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="secondary" size="lg" className="w-full">
-          ＋ Add New Section
+          ＋ ستون جدید اضافه کنید
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Add New Section</DialogTitle>
-          <DialogDescription>
-            What section you want to add today?
-          </DialogDescription>
+          <DialogTitle>ستون جدید اضافه کنید</DialogTitle>
+          <DialogDescription>مایلید چه بخشی اضافه کنید؟</DialogDescription>
         </DialogHeader>
         <form
           id="todo-form"
@@ -58,7 +56,7 @@ export default function NewSectionDialog() {
         <DialogFooter>
           <DialogTrigger asChild>
             <Button type="submit" size="sm" form="todo-form">
-              Add Section
+              ستون اضافه کنید
             </Button>
           </DialogTrigger>
         </DialogFooter>

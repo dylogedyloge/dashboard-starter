@@ -3,64 +3,97 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export function RecentSales() {
   return (
     <div className="space-y-8">
-      <div className="flex items-center">
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/avatars/01.png" alt="Avatar" />
-          <AvatarFallback>OM</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">Olivia Martin</p>
-          <p className="text-sm text-muted-foreground">
-            olivia.martin@email.com
-          </p>
+      <div className="flex justify-between">
+        <div className="flex items-center ">
+          <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border">
+            <AvatarImage
+              src="https://api.dicebear.com/8.x/notionists/svg?seed=Aneka"
+              alt="آواتار"
+            />
+            <AvatarFallback>ا.ا</AvatarFallback>
+          </Avatar>
+          <div className="mr-4 space-y-1 ">
+            <p className="text-sm font-medium leading-none">امیر نجفی</p>
+            <p className="text-sm text-muted-foreground">
+              amir.najafi@email.com
+            </p>
+          </div>
         </div>
-        <div className="ml-auto font-medium">+$1,999.00</div>
+        <div>+۱٬۹۹۹٫۰۰ تومان</div>
       </div>
-      <div className="flex items-center">
-        <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border">
-          <AvatarImage src="/avatars/02.png" alt="Avatar" />
-          <AvatarFallback>JL</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">Jackson Lee</p>
-          <p className="text-sm text-muted-foreground">jackson.lee@email.com</p>
+
+      <div className="flex justify-between">
+        <div className="flex items-center">
+          <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border">
+            <AvatarImage
+              src="https://api.dicebear.com/8.x/notionists/svg?seed=Sammy"
+              alt="آواتار"
+            />
+
+            <AvatarFallback>ج.ل</AvatarFallback>
+          </Avatar>
+          <div className="mr-4 space-y-1">
+            <p className="text-sm font-medium leading-none">محمدرضا اکبری</p>
+            <p className="text-sm text-muted-foreground">
+              mohammadreza.akbari@email.com
+            </p>
+          </div>
         </div>
-        <div className="ml-auto font-medium">+$39.00</div>
+        <div className="font-medium">+۳۹٫۰۰ تومان</div>
       </div>
-      <div className="flex items-center">
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/avatars/03.png" alt="Avatar" />
-          <AvatarFallback>IN</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">Isabella Nguyen</p>
-          <p className="text-sm text-muted-foreground">
-            isabella.nguyen@email.com
-          </p>
+      <div className="flex justify-between">
+        <div className="flex items-center">
+          <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border">
+            <AvatarImage
+              src="https://api.dicebear.com/8.x/notionists/svg?seed=Mimi"
+              alt="آواتار"
+            />
+            <AvatarFallback>ای.ن</AvatarFallback>
+          </Avatar>
+          <div className="mr-4 space-y-1">
+            <p className="text-sm font-medium leading-none">فاطمه احمدی</p>
+            <p className="text-sm text-muted-foreground">
+              fatemeh.ahmadi@email.com
+            </p>
+          </div>
         </div>
-        <div className="ml-auto font-medium">+$299.00</div>
+        <div className="font-medium">+۲۹۹٫۰۰ تومان</div>
       </div>
-      <div className="flex items-center">
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/avatars/04.png" alt="Avatar" />
-          <AvatarFallback>WK</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">William Kim</p>
-          <p className="text-sm text-muted-foreground">will@email.com</p>
+      <div className="flex justify-between">
+        <div className="flex items-center">
+          <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border">
+            <AvatarImage
+              src="https://api.dicebear.com/8.x/notionists/svg?seed=Bob"
+              alt="آواتار"
+            />
+            <AvatarFallback>و.ک</AvatarFallback>
+          </Avatar>
+          <div className="mr-4 space-y-1">
+            <p className="text-sm font-medium leading-none">سارا رضایی</p>
+            <p className="text-sm text-muted-foreground">
+              sara.rezaei@email.com
+            </p>
+          </div>
         </div>
-        <div className="ml-auto font-medium">+$99.00</div>
+        <div className="  font-medium">+۹۹٫۰۰ تومان</div>
       </div>
-      <div className="flex items-center">
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/avatars/05.png" alt="Avatar" />
-          <AvatarFallback>SD</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">Sofia Davis</p>
-          <p className="text-sm text-muted-foreground">sofia.davis@email.com</p>
+      <div className="flex justify-between">
+        <div className="flex items-center">
+          <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border">
+            <AvatarImage
+              src="https://api.dicebear.com/8.x/notionists/svg?seed=Jasper"
+              alt="آواتار"
+            />
+            <AvatarFallback>ص.د</AvatarFallback>
+          </Avatar>
+          <div className="mr-4 space-y-1">
+            <p className="text-sm font-medium leading-none">علی اکبری</p>
+            <p className="text-sm text-muted-foreground">
+              ali.akbari@email.com
+            </p>
+          </div>
         </div>
-        <div className="ml-auto font-medium">+$39.00</div>
+        <div className="  font-medium">+۳۹٫۰۰ تومان</div>
       </div>
     </div>
   );

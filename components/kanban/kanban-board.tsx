@@ -27,15 +27,15 @@ import { TaskCard } from "./task-card";
 const defaultCols = [
   {
     id: "TODO" as const,
-    title: "Todo",
+    title: "برای انجام",
   },
   {
     id: "IN_PROGRESS" as const,
-    title: "In progress",
+    title: "در حال انجام",
   },
   {
     id: "DONE" as const,
-    title: "Done",
+    title: "انجام‌شده",
   },
 ] satisfies Column[];
 
@@ -43,14 +43,14 @@ export type ColumnId = (typeof defaultCols)[number]["id"];
 
 const initialTasks: Task[] = [
   {
-    id: "task1",
+    id: "تسک ۱",
     status: "DONE",
-    title: "Project initiation and planning",
+    title: "آغاز پروژه و برنامه‌ریزی",
   },
   {
-    id: "task2",
+    id: "تسک ۲",
     status: "DONE",
-    title: "Gather requirements from stakeholders",
+    title: "جمع‌آوری اطلاعات برای سرمایه‌گذار",
   },
 ];
 export function KanbanBoard() {

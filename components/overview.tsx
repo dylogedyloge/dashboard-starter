@@ -1,76 +1,103 @@
 "use client";
 
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
+function englishToPersian(input: number) {
+  const persianDigits: string[] = [
+    "۰",
+    "۱",
+    "۲",
+    "۳",
+    "۴",
+    "۵",
+    "۶",
+    "۷",
+    "۸",
+    "۹",
+  ];
+  return input.toString().replace(/\d/g, (x: any) => persianDigits[x]);
+}
 
 const data = [
   {
-    name: "Jan",
+    name: "فروردین",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Feb",
+    name: "اردیبهشت",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Mar",
+    name: "خرداد",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Apr",
+    name: "تیر",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "May",
+    name: "مرداد",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Jun",
+    name: "شهریور",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Jul",
+    name: "مهر",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Aug",
+    name: "آبان",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Sep",
+    name: "آذر",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Oct",
+    name: "دی",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Nov",
+    name: "بهمن",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    name: "Dec",
+    name: "اسفند",
     total: Math.floor(Math.random() * 5000) + 1000,
   },
 ];
+const dataRTL = [...data].reverse();
 
 export function Overview() {
   return (
-    <ResponsiveContainer width="100%" height={350}>
-      <BarChart data={data}>
+    <ResponsiveContainer width="100%" height="100%">
+      <BarChart data={dataRTL}>
         <XAxis
           dataKey="name"
           stroke="#888888"
-          fontSize={12}
+          fontSize={10}
           tickLine={false}
           axisLine={false}
+          tick={{ dy: 10, dx: -10 }}
+          angle={-45}
         />
+
         <YAxis
+          orientation="right"
           stroke="#888888"
-          fontSize={12}
+          fontSize={10}
           tickLine={false}
           axisLine={false}
-          tickFormatter={(value) => `$${value}`}
+          tick={{ dx: 8 }}
+          tickFormatter={(value) => englishToPersian(value)}
+          label={{
+            value: "فروش( به تومان)",
+            angle: -90,
+            position: "insideRight",
+          }}
         />
+
         <Bar dataKey="total" fill="#adfa1d" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
